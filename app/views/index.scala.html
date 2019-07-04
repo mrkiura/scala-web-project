@@ -1,0 +1,14 @@
+@(timeStr: String)
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Home</title>
+        <link rel="shortcut icon" type="image/png"
+           href="@routes.Application.versioned("images/favicon.png")">
+    </head>
+    <body>
+        <h1>Hello Play</h1>
+        <p>@{Math.random}</p>
+        <div>Current time: @timeStr</div>
+    </body>
+</html>
