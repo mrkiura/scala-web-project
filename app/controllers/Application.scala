@@ -13,7 +13,7 @@ import model._
 import services._
 
 
-class Application @Inject() (components: ControllerComponents,
+class Application (components: ControllerComponents,
   assets: Assets, ws: WSClient, sunService: SunService, weatherService: WeatherService)
   extends AbstractController(components) {
     def index = Action.async {
