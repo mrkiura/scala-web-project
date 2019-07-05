@@ -14,10 +14,8 @@ import services._
 
 
 class Application @Inject() (components: ControllerComponents,
-  assets: Assets, ws: WSClient) extends AbstractController(components) {
-    val sunService = new SunService(ws)
-    val weatherService = new WeatherService(ws)
-  
+  assets: Assets, ws: WSClient, sunService: SunService, weatherService: WeatherService)
+  extends AbstractController(components) {
     def index = Action.async {
       val lat = -1.291284
       val lon = 36.821975
